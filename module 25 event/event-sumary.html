@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event sumaray</title>
+</head>
+<body>
+    <h2>input text</h2>
+    <p id="input-text-display">input text displapy</p>
+    <input id="input-field" type="text" name="" id="">
+    <button id="update-botton">update</button>
+
+    <script>
+        document.getElementById('update-botton').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field')
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+
+        })
+    </script>
+
+</body>
+</html>
