@@ -16,7 +16,7 @@
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">              
                 <div class="bg-green-400 p-8 rounded-xl">
                     <h3 class="text-2xl">Deposit</h3>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
                 </div>
                 <div class="bg-yellow-500 p-8 rounded-xl">
                     <h3 class="text-2xl">Withdraw</h3>
@@ -31,19 +31,21 @@
 
         <!-- diposit and withdraw  -->
         <section class="mt-12">
-            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">              
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">              
                 <div class="bg-fuchsia-400 p-8 rounded-xl">
-                    <h3 class="text-2xl mb-4">please Deposit</h3>
+                    <h3 class="text-2xl mb-4 text-white">please Deposit</h3>
                     <input class="w-9/12 block mb-2 px-3" type="text" name="" id="diposit-field" placeholder="$ amunt you want to deposit">
                     <button id="btn-deposit" class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Deposit</button>
                 </div>
                 <div class="bg-sky-400 p-8 rounded-xl">
-                    <h3 class="text-2xl mb-4">please Withdraw</h3>
+                    <h3 class="text-2xl mb-4 text-white">please Withdraw</h3>
                     <input class="w-9/12 block mb-2 px-3" type="text" name="" id="user-email" placeholder="$ amunt you want to Withdraw">
                     <button id="btn-withdraw" class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Withdraw</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="js/deposit.js"></script>
 </body>
 </html>
