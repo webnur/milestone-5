@@ -17,6 +17,10 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const newWithdrawAmountString = withdrawField.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountString)
    
+    if(isNaN(newWithdrawAmount)){
+        alert('please provite valid number');
+        return;
+    }
 
 
     // step 3
@@ -24,17 +28,24 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const previousWithdrawString = previousWithdrawElement.innerText;
     const previousWithdrawAmount = parseFloat(previousWithdrawString);
 
-    //step 4
-   const totalWithdraw = newWithdrawAmount + previousWithdrawAmount;
-
-   // step 5
-   previousWithdrawElement.innerText = totalWithdraw;
-
    // step 6
     const balanceTotalElement = document.getElementById('balance-total');
     const balanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalString)
     
+    if(newWithdrawAmount > previousBalanceTotal){
+        alert('tumar baper bank a ato taka nai');
+        return;
+    }
+
+
+       //step 4
+   const totalWithdraw = newWithdrawAmount + previousWithdrawAmount;
+   // step 5
+   previousWithdrawElement.innerText = totalWithdraw;
+
+
+
 
     // step 7
     const currentBalanceTotal = previousBalanceTotal - newWithdrawAmount;
