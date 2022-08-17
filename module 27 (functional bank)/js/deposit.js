@@ -7,7 +7,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     3. convert string value a number 
     */
    const newDepositAmount = getInputFieldValueById('deposit-field')
-   console.log(newDepositAmount)
+
 
    /* 
         1. get deposit total by id
