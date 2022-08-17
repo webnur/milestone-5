@@ -8,6 +8,7 @@
 
 6. get current Balance total
 7. calculate the new balance and set it to the balance total element
+6. get previous Balance total
 */
 
 // step 1
