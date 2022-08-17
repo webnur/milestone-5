@@ -5,6 +5,9 @@
 3. clear the deposit input field after getting the value 
 4. get the previous deposit total
 5. calculate new deposit total and set the value to the deposit
+
+6. get current Balance total
+7. calculate the new balance and set it to the balance total element
 */
 
 // step 1
@@ -27,4 +30,14 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const newDepositTotal = previousDepositTotal + newDepositAmount
 
     depositTotalElement.innerText = newDepositTotal;
+
+    // step 6
+
+    const balanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotalElement.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+    // step 7 
+    const currentBalanceTotal = previousBalanceTotal + newDepositAmount;
+    balanceTotalElement.innerText = currentBalanceTotal;
 })
