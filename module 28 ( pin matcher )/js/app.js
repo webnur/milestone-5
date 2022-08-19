@@ -50,3 +50,25 @@ document.getElementById('calculator').addEventListener('click', function(event){
 
 
 })
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+    const displayPinField = document.getElementById('display-pin');
+    const currentPin = displayPinField .value;
+
+    const typedNumberField = document.getElementById('typed-number');
+    const typedNumber = typedNumberField.value;
+    
+    const pinSucessMassage = document.getElementById('pin-sucess');
+    const pinFailuremassage = document.getElementById('pin-failure');
+
+    if(currentPin === typedNumber){
+     
+        pinSucessMassage.style.display = 'block'
+        pinFailuremassage.style.display = 'none'
+    }
+    else{
+       
+        pinFailuremassage.style.display = 'block'
+        pinSucessMassage.style.display = 'none'
+    }
+})
