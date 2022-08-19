@@ -24,3 +24,29 @@ document.getElementById('generate-pin').addEventListener('click', function(){
     const displayPinField = document.getElementById('display-pin');
     displayPinField .value = pin;
 })
+
+
+document.getElementById('calculator').addEventListener('click', function(event){
+    const number = event.target.innerText;
+    const typedNumberField = document.getElementById('typed-number');
+    const previousTypedNumber = typedNumberField.value;
+    // console.log(number)
+    if(isNaN(number)){
+        if(number === 'C'){
+            typedNumberField.value = '';
+        }
+        else if(number === '<'){
+            const digits = previousTypedNumber.split('');
+            digits.pop();
+            const remainingDigits = digits.join('');
+            typedNumberField.value = remainingDigits
+        }
+    }
+    else {
+        const newTypeNumber = previousTypedNumber + number
+        typedNumberField.value = newTypeNumber;
+    }
+
+
+
+})
