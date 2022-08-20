@@ -19,17 +19,18 @@
             </div>
             <div class="bg-green-200 p-6">
                 <h2>income</h2>
-                <p class="py-2">Income: <input type="text" name="" id=""></p>
-                <h2>Expenses</h2>
-                <p class="py-2">Food : <input type="text" name="" id=""></p>
-                <p class="py-2">Rent : <input type="text" name="" id=""></p>
-                <p class="py-2">Cloths : <input type="text" name="" id=""></p> <br>
-                <button class="bg-yellow-300">calculate</button>
-                <h2 class="text-2xl">Total Expenses: 5500 </h2>
-                <h3 class="2xl">Balance: 4500</h3>
+                <p class="py-2">Income: <input id="income-input" type="text" name="" id=""></p>
+                <h2 class="font-bold text-3xl ms-6">Expenses</h2>
+                <p class="py-2">Food : <input id="food-cost" type="text" name="" id=""></p>
+                <p class="py-2">Rent : <input id="rent-cost" type="text" name="" id=""></p>
+                <p class="py-2">Cloths : <input id="cloth-price" type="text" name="" id=""></p> <br>
+                <button id="calculate-button" class="bg-yellow-300 px-8 py-2 rounded text-slate-700">calculate</button>
+
+                <h2 class="text-2xl">Total Expenses: <span id="total-expenses">000</span> </h2>
+                <h3 class="">Balance: 4500</h3>
                 <div class="flex items-center">
-                    <p class="py-2">save: <input type="text" name="" id=""></p> %
-                    <button class="ml-4 bg-emerald-400 py-3 px-8">save</button>
+                    <p class="py-2">save: <input type="text" name="" id=""></p> <span class="ml-3">%</span> 
+                    <button class="ml-4 bg-emerald-400 py-2 px-8">save</button>
                 </div>
                 <h2>Saving Amount: 2000 </h2>
                 <h2>Remaining Balance: 2500 </h2>
