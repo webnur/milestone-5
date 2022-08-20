@@ -5,7 +5,6 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const incomeInputField = document.getElementById('income-input');
     const incomeValueString = incomeInputField.value;
     const incomeAmount = parseFloat(incomeValueString)
-    console.log(incomeAmount)
     incomeInputField.value = '';
 
     // food cose
@@ -37,5 +36,28 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const updateBalanceShow = document.getElementById('update-balace');
     updateBalanceShow.innerText = updateBalance;
 
+    // const saveAmount = incomeAmount - (incomeAmount * savingAmount / 100);
+
+
     
+})
+
+document.getElementById('save-button').addEventListener('click', function(){
+
+    const incomeInputField = document.getElementById('income-input');
+    const incomeValueString = incomeInputField.value;
+    const incomeAmount = parseFloat(incomeValueString)
+    incomeInputField.value = '';
+
+    const savingAmountField = document.getElementById('save-amount-input');
+    const savingString = savingAmountField.value;
+    const savingAmount = parseFloat(savingString);
+
+    // const totalSave = incomeAmount / savingAmount;
+    const totalSave = (savingAmount / 100) * incomeAmount
+
+    const showSaveAmount = document.getElementById('save-amount-value');
+
+    showSaveAmount.innerText = totalSave;
+
 })
