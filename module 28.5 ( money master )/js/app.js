@@ -1,4 +1,9 @@
-
+function getInputValue(inputId){
+    const inputField = document.getElementById(inputId);
+    const valueString = inputField.value;
+    const value = parseFloat(valueString);
+    return value;
+}
 
 document.getElementById('calculate-button').addEventListener('click', function(){
 
@@ -6,7 +11,7 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const incomeValueString = incomeInputField.value;
     const incomeAmount = parseFloat(incomeValueString)
     // incomeInputField.value = '';
-
+  
     // food cose
     const foodCost = document.getElementById('food-cost');
     const foodCostString = foodCost.value;
